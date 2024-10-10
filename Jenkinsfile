@@ -57,7 +57,7 @@ stage('Build Image') {
             steps {
             sh """
 		oc set image \
-		deployment ${DEPLOYMENT_STAGE} \
+		deployment ${DEPLOYMENT_CONFIG_STAGE} \
 		shopping-cart-stage=quay.io/${QUAY_USR}/do400-deployingenvironments:build-${BUILD_NUMBER} \
 		-n ${APP_NAMESPACE} --record
 		"""
